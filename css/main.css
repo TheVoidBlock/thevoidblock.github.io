@@ -1,32 +1,227 @@
+:root {
+    --color-raised-bg: #26292f;
+    --color-bg: #16181c;
+    --dark-color-text: #b0bac5;
+    --dark-color-text-dark: #ecf9fb;
+    --color-button-bg: #434956;
+    --color-text-inactive: #929aa3;
+    --color-main: #00ff55;
+}
+
 body {
-    background: black;
-    text-align: center;
+    margin: 0;
+    background-color: var(--color-bg);
 }
 
-h1 {
-    color: white;
+.text-secondary {
+    color: #b0bac5;
+}
+.text {
+    color: #ecf9fb;
 }
 
-.link {
-    width: 170px;
-    font-size: 20px;
-    text-shadow: 1px 1px;
-    color: white;
-    border-color: white;
-    border-radius: 10px;
-    border-width: 5px;
-    transition: .3s;
-}
-.link:hover {
+.logo {
     cursor: pointer;
-    border-color: gray;
-    color: gray;
-    transform: rotate(360deg);
 }
 
-.link.sus-site {
-    background: red;
+.button {
+    width: 100px;
+    height: 50px;
+    background-color: var(--color-main);
+    outline-width: 0;
+    border-radius: 10px;
+    border-color: var(--color-main);
+    color: var(--dark-color-text-dark);
 }
-.link.text-tools {
-    background: lime;
+.button:hover {
+    cursor: pointer;
+}
+
+.textarea {
+    position: relative;
+    background-color: var(--color-button-bg);
+    color: var(--dark-color-text-dark);
+    border-radius: 20px;
+    border: none;
+    resize: none;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+}
+.textarea:disabled {
+    filter: brightness(50%);
+}
+::placeholder {
+    color: var(--color-text-inactive);
+    font-size: 20px;
+}
+
+* {
+    font-weight: bold;
+    font-family: Copperplate, Helvetica, sans-serif;
+}
+
+.div {
+    position: relative;
+}
+
+.main {
+    position: relative;
+    top: 120px;
+    --width: 80vw;
+    width: var(--width);
+    left: calc(50vw - var(--width)/2);
+    text-align: center;
+    background-color: var(--color-raised-bg);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+.main__input__input {
+    width: calc(var(--width) - 30px);
+    height: 200px;
+}
+.main__generate {
+    width: calc(var(--width) - 30vw);
+    margin: 20px;
+}
+.main__output {
+    width: calc(var(--width) - 30px);
+    height: 1000px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid white;
+    text-align: left;
+    padding: 8px;
+    color: white;
+} 
+tr:nth-child(even) {
+    background-color: rgb(100, 100, 100);
+}
+
+.title {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sidelist {
+    position: absolute;
+    width: 25vw;
+    background-color: var(--color-raised-bg);
+    border-radius: 10px;
+    top: 140px;
+    left: 20px;
+    overflow: auto;
+    text-wrap: nowrap;
+    padding: 10px;
+    height: 500px;
+    margin-top: 30px;
+}
+.checklist {
+    position: relative;
+}
+.checkbox {
+    accent-color: var(--color-main);
+}
+
+.sidepanel {
+    position: absolute;
+    width: 25vw;
+    background-color: var(--color-raised-bg);
+    border-radius: 10px;
+    top: 700px;
+    left: 20px;
+    padding: 10px;
+    margin-top: 30px;
+}
+.tinygenerate {
+    width: 20vw;
+    margin: 20px;
+}
+.tinyinput {
+    width: 23vw;
+}
+.tinyoutput {
+    width: 23vw;
+    height: 300px;
+}
+.select {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-button-bg);
+    width: 150px;
+    height: 25px;
+}
+.main__generate-mini {
+    width: calc((var(--width) - 30vw)/2) !important;
+}
+
+.toggle-slider > .toggle {
+    position : relative ;
+    display : inline-block;
+    width : 150px;
+    height : 20px;
+    background-color: var(--color-button-bg);
+    border-radius: 10px;
+    border: none;
+}
+    
+/* After slide changes */
+.toggle-slider > .toggle:after {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: var(--color-main);
+    top: 1px; 
+    left: 1px;
+    transition: all 0.5s;
+}
+
+.toggle-slider > .toggle > p {
+    position: absolute;
+    margin: 3px;
+    left: 20px;
+    user-select: none;
+    z-index: 1;
+}
+
+.toggle-slider > .checkbox:checked + .toggle::after {
+    left : 75px; 
+}
+
+.toggle-slider > .checkbox { 
+    display : none;
+}
+
+.main__projects__ {
+    width: 500px;
+    height: 200px;
+    background-color: var(--color-button-bg);
+    margin: 10px;
+    padding: 10px;
+    float: left;
+
+    border-radius: 10px;
+}
+.main__projects {
+    padding: 10px;
+}
+.main {
+    height: 10000px;
+    width: 81vw !important;
+}
+#search {
+    position: relative;
+    width: 400px;
+    right: 50px;
 }

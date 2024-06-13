@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>The Void Block Hub</title>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
+  <head>
+    <title>Projects | Text Tools</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="javascript/projects.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
 
-    <body>
-        <h1>The Void Block Hub</h1>
-        <a href="suspicous-site/"><button class="sus-site link">Suspicous<br>website</button></a>
-        <a href="text-tools/"><button class="text-tools link">Text<br>tools</button></a>
-    </body>
+    <h1 class="title text">Projects</h1>
+    <div class="main">
+      <input
+        id="search"
+        class="textarea"
+        placeholder="Search"
+        onkeyup="filter()"
+      />
+      <div class="main__projects">
+        <a href="https://thevoidblock.github.io/text-tools" id="sort" class="sort">
+          <div class="main__projects__">
+            <h1 class="text">Text Tools</h1>
+            <p class="text-secondary">
+              Useful tools for doing things to your text
+            </p>
+          </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </body>
 </html>
